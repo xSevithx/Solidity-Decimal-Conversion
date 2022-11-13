@@ -4,8 +4,8 @@ interface IERC20 {
 
 contract DecimalsTest {
     
-    function changeDecimals(address _fromToken, address _desToken, uint _amount) external view returns (uint) {
-        return convertDecimals(_amount, getDecimals(_fromToken), getDecimals(_desToken));
+    function changeDecimals(address _fromToken, address _toToken, uint _amount) external view returns (uint) {
+        return convertDecimals(_amount, getDecimals(_fromToken), getDecimals(_toToken));
     }
 
     function getDecimals(address _token) internal view returns (uint8) {
